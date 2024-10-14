@@ -32,7 +32,7 @@ paths:
                     firstName: Alice
                     lastName: Smith
                     email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
+                    dateOfBirth: 1997-3410-31
                     emailVerified: true
                     signUpDate: '2019-08-24'
         '404':
@@ -156,56 +156,22 @@ components:
     User:
       title: User
       type: object
-      description: ''
-      examples:
-        - id: 142
-          firstName: Alice
-          lastName: Smith
-          email: alice.smith@gmail.com
-          dateOfBirth: '1997-10-31'
-          emailVerified: true
-          signUpDate: '2019-08-24'
+      x-stoplight:
+        id: uhoqgu1o25pct
+      required:
+        - id
       properties:
         id:
-          type: integer
+          type: array
           description: Unique identifier for the given user.
           x-stoplight:
             id: kol0w85joa8vg
-        firstName:
-          type: string
-          x-stoplight:
-            id: 3atmx7mq6isae
-        lastName:
-          type: string
-          x-stoplight:
-            id: n38bwaap9aecm
-        email:
-          type: string
-          format: email
-          x-stoplight:
-            id: s4un3cnou5lhl
-        dateOfBirth:
-          type: string
-          format: date
-          example: '1997-10-31'
-          x-stoplight:
-            id: 6u38uf5lglxou
-        emailVerified:
-          type: boolean
-          description: Set to true if the user's email has been verified.
-          x-stoplight:
-            id: xuqpf2ebqrf7f
-        createDate:
-          type: string
-          format: date
-          description: The date that the user was created.
-          x-stoplight:
-            id: fw1lmt58zulv1
-      required:
-        - id
-        - firstName
-        - lastName
-        - email
-        - emailVerified
-      x-stoplight:
-        id: uhoqgu1o25pct
+          items:
+            x-stoplight:
+              id: 509r15agnx7j0
+            type: string
+      examples:
+        - id:
+            - string23
+            - string
+            - string1
